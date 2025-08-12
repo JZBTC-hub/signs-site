@@ -11,11 +11,9 @@ import { cn } from "@/lib/utils"
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/resources", label: "Resources" },
+  { href: "/members", label: "Members Only" },
   { href: "/about", label: "About" },
-  { href: "/token", label: "Token" },
-  { href: "/perks", label: "Perks" },
-  { href: "/community", label: "Community" },
-  { href: "/contact", label: "Contact" },
 ]
 
 function Logo() {
