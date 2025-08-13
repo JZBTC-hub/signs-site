@@ -14,12 +14,13 @@ const links = [
   { href: "/resources", label: "Resources" },
   { href: "/members", label: "Members Only" },
   { href: "/about", label: "About" },
+  
 ]
 
 function Logo() {
   return (
     <Link href="/" className="font-display text-xl tracking-tight">
-      SIG<span className="text-primary">NS</span>
+      <span className="text-primary">SIGNS</span>
     </Link>
   )
 }
