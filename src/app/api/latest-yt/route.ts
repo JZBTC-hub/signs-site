@@ -1,7 +1,7 @@
 // Server: fetch latest video from your channel RSS (no API key)
 import { NextResponse } from "next/server";
 
-export const revalidate = 60 * 60; // re-fetch hourly
+export const revalidate = 3600; // re-fetch hourly
 
 export async function GET() {
   const channelId = process.env.YOUTUBE_CHANNEL_ID; // e.g. "UCxxxx..."

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Wallet } from "lucide-react"
+import { Menu, Wallet } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
@@ -20,7 +20,7 @@ const links = [
 function Logo() {
   return (
     <Link href="/" className="font-display text-xl tracking-tight">
-      <span className="text-primary">SIGNS</span>
+      SIGNS
     </Link>
   )
 }
