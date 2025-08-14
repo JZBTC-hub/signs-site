@@ -1,10 +1,11 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Coins, ExternalLink, Layers, LinkIcon, Lock, ShieldAlert, ShieldCheck, Wallet } from "lucide-react";
+import { ArrowRight, BookOpen, Coins, ExternalLink, Layers, LinkIcon, Lock, ShieldAlert, ShieldCheck, Wallet, Copy, Check } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion";
-import CopyCA from "@/app/resources/CopyCA"; // <-- client component
 
 export const metadata = {
   title: "Resources",
@@ -30,6 +31,18 @@ const links = {
 const CONTRACT_ADDRESS = "GUxKzvR7QmvA5M5j2LufNynVMa6hxjWkERDM7Vnpvvii";
 
 export default function ResourcesPage() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (e) {
+      console.error("Clipboard copy failed", e);
+    }
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero */}
@@ -90,7 +103,9 @@ export default function ResourcesPage() {
                     <span className="font-medium">Copy the Contract Address (CA).</span>
                     <div className="mt-2 flex items-center justify-between gap-3 rounded-md border p-3 text-sm bg-background">
                       <code className="font-mono break-all">{CONTRACT_ADDRESS}</code>
-                      <CopyCA value={CONTRACT_ADDRESS} /> {/* client button */}
+                      <Button variant="ghost" size="icon" onClick={handleCopy} title="Copy to clipboard" aria-label="Copy contract address">
+                        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                      </Button>
                     </div>
                   </li>
                   <li>
@@ -112,9 +127,7 @@ export default function ResourcesPage() {
               </CardContent>
               <CardFooter className="flex gap-3">
                 <Button asChild>
-                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in&inputMint=sol&outputMint=GUxKzvR7QmvA5M5j2LufNynVMa6hxjWkERDM7Vnpvvii" target="_blank" rel="noreferrer">
-                    Swap on Raydium <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in&inputMint=sol&outputMint=GUxKzvR7QmvA5M5j2LufNynVMa6hxjWkERDM7Vnpvvii" target="_blank" rel="noreferrer">Swap on Raydium <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
                 <Button asChild variant="outline">
                   <a href="#" target="_blank" rel="noreferrer">Watch a 60s tutorial</a>
@@ -199,7 +212,7 @@ export default function ResourcesPage() {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-3 text-sm leading-relaxed">
-                  <p>Always verify links from official sources. Double-check contract addresses.</p>
+                  <p>Always verify links from this official page. Double-check contract addresses.</p>
                   <p>Never connect your wallet to unknown sites. Revoke approvals you don’t recognize.</p>
                   <p>Team members will never DM you asking for funds or seed phrases.</p>
                 </div>
@@ -214,7 +227,7 @@ export default function ResourcesPage() {
                 <div className="space-y-3 text-sm leading-relaxed">
                   <p>Start small, learn the flow, and scale only after you’re comfortable.</p>
                   <p>Track your portfolio and transactions.</p>
-                  <p>Make sure you have a plan for entries AND exits.</p>
+                  <p>Make sure you have a polan for entries and exits.</p>
                   <p>DCA beats FOMO. Education beats luck. Discipline beats noise.</p>
                 </div>
               </AccordionContent>
