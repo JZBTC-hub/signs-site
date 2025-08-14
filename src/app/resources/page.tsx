@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Coins, ExternalLink, Layers, LinkIcon, Lock, ShieldAlert, ShieldCheck, Wallet } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion";
 import CopyCA from "@/app/resources/CopyCA"; // <-- client component
 
 export const metadata = {
