@@ -7,11 +7,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion";
 
-export const metadata = {
-  title: "Resources",
-  description: "Official links, how to buy, ecosystem, and crypto basics for the SIGNS community.",
-};
-
 const links = {
   official: [
     { label: "X (Twitter)", href: "https://x.com/signsmemecoin", icon: LinkIcon, desc: "Official SIGNS updates and vibes." },
