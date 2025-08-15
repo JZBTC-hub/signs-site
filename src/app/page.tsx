@@ -252,7 +252,7 @@ function Spotlight() {
   }, []);
 
   const videoSrc = yt?.id ? `https://www.youtube.com/embed/${yt.id}?rel=0&modestbranding=1` : null;
-  const href = yt?.link || "https://youtube.com/@<your-handle>"; // fallback if RSS fails
+  const href = yt?.link || "https://youtube.com/@signsmemecoin"; // fallback if RSS fails
 
   return (
     <section className="mt-16 rounded-3xl border border-neutral-800 bg-neutral-900/40 p-8">

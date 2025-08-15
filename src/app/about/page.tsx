@@ -37,7 +37,10 @@ export default function AboutPage() {
     <main className="min-h-screen bg-black text-zinc-200">
       {/* Hero / Vision */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-black to-black pointer-events-none" />
+        <div
+  className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-transparent via-black/40 to-black"
+  aria-hidden="true"
+/>
         <div className="mx-auto max-w-5xl px-6 pt-20 pb-12 md:pt-28 md:pb-16">
           <motion.h1
             variants={fadeUp}
@@ -45,7 +48,7 @@ export default function AboutPage() {
             animate="show"
             className="text-3xl md:text-5xl font-semibold tracking-tight text-white"
           >
-            When we make it, we won’t say a word. But there will be signs.
+            When we make it, we won’t say a word.<br />But there will be signs.
           </motion.h1>
 
           <motion.p
