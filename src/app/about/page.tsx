@@ -48,7 +48,8 @@ export default function AboutPage() {
             animate="show"
             className="text-3xl md:text-5xl font-semibold tracking-tight text-white"
           >
-            When we make it, we won’t say a word.<br />But there will be signs.
+            When we make it, we won’t say a word.<br />
+            But there will be <span className="text-yellow-500">Signs</span>.
           </motion.h1>
 
           <motion.p
@@ -57,7 +58,7 @@ export default function AboutPage() {
             animate="show"
             className="mt-5 max-w-3xl text-base md:text-lg text-zinc-300"
           >
-            <span className="font-medium text-white">SIGNS</span> is more than a token — it’s a luxury club for the quietly elite, the ones who let the lifestyle do the talking. It’s where conviction meets culture, and where the patient write their stories in champagne and chrome.
+            <span className="font-medium text-white">Signs</span> is more than a token — it’s a luxury club for the quietly elite, the ones who let the lifestyle do the talking. It’s where conviction meets culture, and where the patient write their stories in champagne and chrome.
           </motion.p>
 
           <motion.div
@@ -163,12 +164,6 @@ export default function AboutPage() {
           ))}
         </motion.div>
 
-        {/* Optional: media strip / gallery placeholder */}
-        <div className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 p-6 text-sm text-zinc-300">
-          <div className="opacity-80">
-            Optional gallery strip: embed screenshots of viral “there will be signs” posts & luxury-styled memes here.
-          </div>
-        </div>
       </section>
 
       {/* Team & History */}
@@ -225,7 +220,7 @@ export default function AboutPage() {
           <h3 className="text-xl md:text-2xl font-semibold text-white">If you know, you know. If you don’t, there’s still time.</h3>
           <div className="mt-6 flex items-center justify-center gap-3">
             <a
-              href="https://x.com/"
+              href="https://x.com/signsmemecoin"
               target="_blank"
               rel="noreferrer"
               className="rounded-xl bg-white text-black px-5 py-3 text-sm font-medium hover:bg-zinc-200 transition"
@@ -233,10 +228,12 @@ export default function AboutPage() {
               Follow on X
             </a>
             <a
-              href="/discord" // Replace with your Discord entry/landing page.
+              href="https://discord.com/invite/Jv24XjkMyw"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-xl border border-white/20 px-5 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
             >
-              Enter the Club
+              Join the Club
             </a>
           </div>
         </motion.div>
